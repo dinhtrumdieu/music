@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">AppMusic</string>
+    <string name="broadcast_music_intent">music</string>
+    <string name="recycle_title_header">Header</string>
+
+    <!--Comman Action-->
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Main Screen-->
+    <string name="activity_main.textview.nam_music_default">NhacCuaTui</string>
+    <string name="activity.main.textview.video_mv">VIDEO | MV</string>
+    <string name="activity.main.textview.playlist_abum">PLAYLIST | ABUM</string>
+    <string name="activity.main.texview.bai_hat">BÀI HÁT</string>
+    <string name="_87_5k">87.5k</string>
+
+    <!--Play Song Screen-->
+    <string name="activity.play_song.textview.name_song">Cơn mưa ngang qua</string>
+    <string name="activity.play_song.textview.name_singer">Sơn tùng M-TP</string>
+    <string name="activity.play_song.textview.time_current">00:00</string>
+    <string name="activity.play_song.textview.time_total">04:30</string>
+    <string name="activity.play_song.textview.lyrics_default">Lời hát đang được cập nhật</string>
+
+    <!-- navigation -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="nav_item_activity_titles">
+        <item>Trang chủ</item>
+        <item>Playlist</item>
+        <item>Videos</item>
+        <item>Nhạc trong máy</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rllAbum"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/custom_abum"
+            android:gravity="center_vertical"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/_2sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_27112" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_87_5k"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9sdp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ic_play_music" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvNameAbum"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/activity.play_song.textview.name_song"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/white" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvNameSinger"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/activity.play_song.textview.name_singer"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_10sdp" />
+</LinearLayout>

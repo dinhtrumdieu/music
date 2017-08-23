@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_bg_play_music">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBarPlayActivity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imgBtnBack"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_exit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@+id/imgBtnBack"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvNameMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/activity.play_song.textview.name_song"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvNameSinger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/activity.play_song.textview.name_singer"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llConsoleBottom"
+        android:layout_below="@+id/toolBarPlayActivity">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerPlayActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/pagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsoleBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="5">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvTimeCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity.play_song.textview.time_current"
+                android:textColor="@color/text_color" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="5"
+                android:progress="0" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvTimeTotalDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity.play_song.textview.time_total"
+                android:textColor="@color/text_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity.play.layout.console.height"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBtnPrevious"
+                android:layout_width="@dimen/activity.play.image.previous.size"
+                android:layout_height="@dimen/activity.play.image.previous.size"
+                android:background="@drawable/ic_previous_music"
+                android:clickable="true" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBtnPlay"
+                android:layout_width="@dimen/activity.play.image.play.size"
+                android:layout_height="@dimen/activity.play.image.play.size"
+                android:layout_marginLeft="@dimen/activity.play.image.play.margin"
+                android:layout_marginRight="@dimen/activity.play.image.play.margin"
+                android:clickable="true"
+                android:src="@drawable/ic_play_music" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBtnPause"
+                android:layout_width="@dimen/activity.play.image.play.size"
+                android:layout_height="@dimen/activity.play.image.play.size"
+                android:layout_marginLeft="@dimen/activity.play.image.play.margin"
+                android:layout_marginRight="@dimen/activity.play.image.play.margin"
+                android:clickable="true"
+                android:src="@drawable/ic_pause_music"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBtnNext"
+                android:layout_width="@dimen/activity.play.image.next.size"
+                android:layout_height="@dimen/activity.play.image.next.size"
+                android:background="@drawable/ic_next_music"
+                android:clickable="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
